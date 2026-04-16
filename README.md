@@ -11,4 +11,6 @@
 
 ![Break-down](image-1.png)
 
-## W2
+## W3
+### Activity 1
+![Break-down](image-2.png)
