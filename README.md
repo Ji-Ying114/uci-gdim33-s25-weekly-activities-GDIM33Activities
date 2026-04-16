@@ -14,3 +14,8 @@
 ## W3
 ### Activity 1
 ![Break-down](image-2.png)
+### Activity 2
+1. It makes the event name changable. If I need to change the name of it, I only need to change it in one place, instead of clicking into every script with it. It makes the script more maintainable. 
+2. It makes it convenient to verify if clicking the walrus actually triggers the event as expected. It makes debugging much easier and helps find logical errors, which will not be reflected by the system. 
+3. I dont think that I will need this because this is a 4x game in which mouse clicking is the core input, just like on the desktop. 
+4. It is relevant because it is a turn-based game, so the game has to decide whose turn to act it is. 
