@@ -7,6 +7,7 @@ namespace W4Activity
     {
         // Singleton stuff- allows this class to be accessed from anywhere in the codebase without a reference (like a member variable)
         // do not edit this line
+        public DialogueNodeW4 startingLine;
         public static DialogueAdvancerW4 _Instance {get; private set;}
 
         // More Singleton stuff
@@ -19,7 +20,10 @@ namespace W4Activity
 
             _Instance = this;
         }
-
+        void Start()
+        {
+            EventBus.Trigger(VsEventNames.NewDialogueEvent, startingLine);
+        }
         // Button hooks up to this method
         // do not edit this method
         public void ChooseDialogue (DialogueNodeW4 nextLine)

@@ -26,3 +26,6 @@
 2. Allen Gu, Haoyi Zhang, Pengcheng Qi, Ryan Yang, Yaokun Wan 
 3. All the teamates dont know what to do at all becasue there is no guide to use the console (the only directly-interactable part). After the guidance, they can use the console to regenerate the map and check map data. The response is that the map generation function could be interesting, but I need to render it out so that it can be shown directly to the players. 
 ### Activity 2
+1. Yes, because more contents can be added by scriptable objects, without having to write any code.
+2. There can be at most 4, becasue buttons will be place out of the screen if more are added.
+3. It refreshes the visual scripting graph to reflect any changes made to the underlying code, so that all nodes and connections are up to date.
