@@ -19,3 +19,10 @@
 2. It makes it convenient to verify if clicking the walrus actually triggers the event as expected. It makes debugging much easier and helps find logical errors, which will not be reflected by the system. 
 3. I dont think that I will need this because this is a 4x game in which mouse clicking is the core input, just like on the desktop. 
 4. It is relevant because it is a turn-based game, so the game has to decide whose turn to act it is. 
+
+## W4
+### Activity 1
+1. The system can automatically generate a map based on a set of value and a seed in the map generation inspector. There is a console in which the player can input command to regenerate the map or to output map data. The map is not yet rendered, so there is only the skybox and console ui displayed. The current playtesting goal is to test if the map generation function and the console functions normally as expected without major bugs.
+2. Allen Gu, Haoyi Zhang, Pengcheng Qi, Ryan Yang, Yaokun Wan 
+3. All the teamates dont know what to do at all becasue there is no guide to use the console (the only directly-interactable part). After the guidance, they can use the console to regenerate the map and check map data. The response is that the map generation function could be interesting, but I need to render it out so that it can be shown directly to the players. 
+### Activity 2
