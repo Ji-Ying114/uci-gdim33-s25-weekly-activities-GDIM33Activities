@@ -29,3 +29,14 @@
 1. Yes, because more contents can be added by scriptable objects, without having to write any code.
 2. There can be at most 4, becasue buttons will be place out of the screen if more are added.
 3. It refreshes the visual scripting graph to reflect any changes made to the underlying code, so that all nodes and connections are up to date.
+
+## W5
+### Activity 1
+I will need to build the features of movements of units. 
+1. Build the framework, including the unit scriptable object and the basic logics; debugs will be logged when DebugMode is on.
+2. Test the logic in game to make sure that it runs properly. 
+3. Add artistic assets and related logic to the units so that they can be shown to the players.
+### Activity 2
+1. Fixed the bug of the camera movement logic. It is now stable.
+2. Revised the map generation logic, so that it generates smoother landforms.
+3. Built the unit scriptable object. 
