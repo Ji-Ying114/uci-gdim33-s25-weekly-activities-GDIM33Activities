@@ -40,3 +40,14 @@ I will need to build the features of movements of units.
 1. Fixed the bug of the camera movement logic. It is now stable.
 2. Revised the map generation logic, so that it generates smoother landforms.
 3. Built the unit scriptable object. 
+
+## W6
+### Activity 1
+1. I made the data framework and the movement logic of units, but since they are not yet interactable objects in game, they cannot be tested.
+2. ![My Itch page](https://ji-ying114.itch.io/vertical-slice-milestone-2)
+3. The game can generate a map and move the camera around now, but is not yet a game. I need to focus on the core mechanics to build the game loop to make it really playable. 
+### Activity 2
+1. Becasue all colors have a value between 0.0f and 1.0f, so multiplying will make each value either the same or smaller.
+2. It will make the resulting value more translucent because the alpha value is also between 0.0f and 1.0f, so multiplying will make the final value either equal to or smaller than the original values. 
+3. The shader gets the UV values from the vertex data where each vertex stores its own texture coordinates as part of its vector information.
+4. It does not, because I have been doing so (been tortured by it) for a long time :D
