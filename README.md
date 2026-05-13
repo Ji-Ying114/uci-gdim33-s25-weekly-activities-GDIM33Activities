@@ -44,7 +44,7 @@ I will need to build the features of movements of units.
 ## W6
 ### Activity 1
 1. I made the data framework and the movement logic of units, but since they are not yet interactable objects in game, they cannot be tested.
-2. ![My Itch page](https://ji-ying114.itch.io/vertical-slice-milestone-2)
+2. https://ji-ying114.itch.io/vertical-slice-milestone-2
 3. The game can generate a map and move the camera around now, but is not yet a game. I need to focus on the core mechanics to build the game loop to make it really playable. 
 ### Activity 2
 1. Becasue all colors have a value between 0.0f and 1.0f, so multiplying will make each value either the same or smaller.
