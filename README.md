@@ -51,3 +51,12 @@ I will need to build the features of movements of units.
 2. It will make the resulting value more translucent because the alpha value is also between 0.0f and 1.0f, so multiplying will make the final value either equal to or smaller than the original values. 
 3. The shader gets the UV values from the vertex data where each vertex stores its own texture coordinates as part of its vector information.
 4. It does not, because I have been doing so (been tortured by it) for a long time :D
+
+## W7
+1. The data for the Vertex Color node comes from the color attribute stored within each vertex of the Shiba mesh.
+2. The colors are blended at the edges because the GPU interpolates the per-vertex color data across the surface of each polygon during rendering.
+3. Vertex color looks less detailed because color data is only stored per-vertex and interpolated, unlike a texture which stores unique color information per-pixel; this makes it useful for ambient occlusion baking, LOD coloration, or vertex painting masks.
+4. The visualization shows the back-left leg has a dark patch, which may indicate incorrect or inverted normals on that part of the mesh.
+5. You could debug UV coordinates by outputting them as R and G colors to check for stretching or seams, which is useful for validating texture mapping.
+6. The lighting error occurred because the light direction vector and the surface normal were pointing toward each other, producing a negative dot product (darkness) instead of a positive one.
+7. Additive blend mode was chosen because it makes black areas fully transparent and creates a bright, glowing effect that naturally mimics fire.
