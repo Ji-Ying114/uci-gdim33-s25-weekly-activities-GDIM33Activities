@@ -60,3 +60,15 @@ I will need to build the features of movements of units.
 5. You could debug UV coordinates by outputting them as R and G colors to check for stretching or seams, which is useful for validating texture mapping.
 6. The lighting error occurred because the light direction vector and the surface normal were pointing toward each other, producing a negative dot product (darkness) instead of a positive one.
 7. Additive blend mode was chosen because it makes black areas fully transparent and creates a bright, glowing effect that naturally mimics fire.
+
+## W8
+### Activity 1
+1. I fixed the bugs of the logic of converting the world and the map positions. I re-structured the code, and the turn manager and the game manager are integrated into a new game manager. 
+2. https://ji-ying114.itch.io/milestone3
+3. My playtesting goal: test if the movement system works as expected. 
+4. Playtesting notes: the players can play the game without instructions and discover all the features. It was said that I needed to add more contents to my game in order to make it more playable, and a player expects more interaction with the map. A bug was found: the movement range does not calculate correctly. I think it is because of either the direction helper, which gives the wrong map position data, or the search logic that calculates and returns the positions that are in the movement range.
+### Activity 2b
+1. It convert the ever-increasing time into a looping 0 to 1 value, which makes the UV continuously scroll. 
+2. So that it does not affect the color of the base sprite before the shine texture was added when added with the MainTex. 
+3. Becuase the sprite renderer automatically replaces the MainTex with the object's own sprite, so they show their own textures.
+4. Because the former makes the value increase faster (so its fraction increases faster correspondingly); the latter can casue the final value to be greater than 1, which breaks the continuous scrolling.
