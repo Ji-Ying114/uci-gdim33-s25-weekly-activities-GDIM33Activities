@@ -72,3 +72,10 @@ I will need to build the features of movements of units.
 2. So that it does not affect the color of the base sprite before the shine texture was added when added with the MainTex. 
 3. Becuase the sprite renderer automatically replaces the MainTex with the object's own sprite, so they show their own textures.
 4. Because the former makes the value increase faster (so its fraction increases faster correspondingly); the latter can casue the final value to be greater than 1, which breaks the continuous scrolling.
+
+## W9
+### Activity 1
+The game chosen: War Thunder
+### Activity 2
+![Screenshot](2e4b929c384d4ea9b1aa6fdf76efc3c9.png)
+To make War Thunder'internal structure s X-ray and mouse-over outline effects in Unity, we can split the vehicle model into an opaque internal structure  and a semi-transparent surface skin, rendered later with Transparent queue so that the former naturally shows through the translucent hull. For the highlight outline, we can detect the part with raycast and draw its inflated mesh in a final pass after all transparent objects, using a queue like Overlay or injecting through a CommandBuffer at the AfterRenderingTransparents event to keep the contour sharp on top.
