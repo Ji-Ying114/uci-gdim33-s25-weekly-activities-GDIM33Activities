@@ -76,6 +76,10 @@ I will need to build the features of movements of units.
 ## W9
 ### Activity 1
 The game chosen: War Thunder
-### Activity 2
 ![Screenshot](2e4b929c384d4ea9b1aa6fdf76efc3c9.png)
 To make War Thunder'internal structure s X-ray and mouse-over outline effects in Unity, we can split the vehicle model into an opaque internal structure  and a semi-transparent surface skin, rendered later with Transparent queue so that the former naturally shows through the translucent hull. For the highlight outline, we can detect the part with raycast and draw its inflated mesh in a final pass after all transparent objects, using a queue like Overlay or injecting through a CommandBuffer at the AfterRenderingTransparents event to keep the contour sharp on top.
+### Activity 2
+![Screenshot](image-4.png)
+1. I added a new shader graph.
+2. I drew a asset by hand.
+3. fixed the bug that the game collapses when the player proceeds to the next turn while the unit animation is still playing
