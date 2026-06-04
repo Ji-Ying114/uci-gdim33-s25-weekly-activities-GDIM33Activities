@@ -83,3 +83,27 @@ To make War Thunder'internal structure s X-ray and mouse-over outline effects in
 1. I added a new shader graph.
 2. I drew a asset by hand.
 3. fixed the bug that the game collapses when the player proceeds to the next turn while the unit animation is still playing
+
+## W10
+### Activity 1
+1. I built the town framework so that the player can really own a developing town, which makes the game more complicated and closer to a game that provides a complete gameplay loop. It is part of the core mechanic of this game, and the center of the converting of the resources. The town now can gather resources and develop by itself and the player can do something with it. More functions to be added in the future. The player can click the town name on the panel and rename the town, which makes the game more immersive.
+Like Civilization VI, he player now cannot proceed to the next turn when the required operations are not done: it prevents players from forgetting to operate the units and towns -- it is not useful yet at the current stage, but when the game become - hopefully - complicated enough, it can be a very useful function. 
+Framework for more complicated terrains and landform built (assets not yet added). I built the framework to introduce more variety to the map so that the players will have more diverse options to do with the map, which will make the game more interesting. 
+2. https://ji-ying114.itch.io/vertical-slice-final-submission
+3. Find out if the current UI is readable to players; test if there are bugs related to the town development. 
+4. The players are able to find out the operation methods without any instructions, but none of them noticed the values, including the town production and the movement point of the units. A unit tab that shows the info of the unit is needed; icons for resources are needed.
+The players suggest that the game loop is too short, and they do not really have anything to do. A longer game loop that incorporates more mechanics is needed. 
+### Activity 2
+Before a game is coded, the final experience must be imagined. Using the MDA framework, work backward from aesthetics to the required dynamics, then to specific mechanics. At this stage, technology is not a concern, but the intended feel of the game and what the player does repeatedly.
+
+The experience is then decomposed into distinct gameplay loops. Each loop is an independently repeatable action cycle with clear inputs and outputs. Inputs are player actions or system triggers; outputs are game state changes and feedback. After all loops are mapped out, the requirements are frozen—no new loops are added—to lock the scope.
+
+For each gameplay loop, an MVC structure is used for technical breakdown. A loop is split into model, view, and controller. The model manages data and logical state. The view handles visual and audio presentation. The controller reads input and invokes the model. For each part, technical needs and asset needs are listed. Technical needs are functional points the code must deliver, described in a sentence or two. Asset needs are the types of resources expected—sprites, frame animations, VFX sprite sheets, sound effects, configuration files—only types, not a full inventory. At the low-level design stage, these three parts are kept strictly decoupled: changing the view does not affect the model, and altering input does not impact logic.
+
+Once all loops are broken down, they are compared side by side. Shared technical needs and asset needs are extracted and merged. Identical movement logic used by multiple loops becomes a shared movement module. Common HUD elements, generic click sounds, and similar assets go into a unified list. After this deduplication, the total development effort becomes much clearer.
+
+Technical needs are further decomposed into concrete classes and methods. Each class receives a defined responsibility. Each method lists its inputs, outputs, and internal technical approach. The approach may be as specific as raycasting or tilemap.maptoworldpos. Full pseudocode is unnecessary, but the description must be sufficiently explicit. Asset needs are now broken into a concrete list of asset files, with naming conventions, dimensions, frame counts, and other specifications. At this level of detail, no hidden unknowns remain.
+
+Once everything is fully decomposed, coding and asset production begin in dependency order. This forms a complete action plan constructed before any implementation starts.
+### Activity 3
+More assets are introduced; more types of terrains are added.
